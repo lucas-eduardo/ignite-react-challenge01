@@ -52,10 +52,15 @@ section.task-list {
         align-items: center;
 
         padding: 14px;
-        transition: filter 0.2s;
+        transition: filter 0.2s, background-color 0.2s;
 
-        &:hover {
+        &:not(:disabled):hover {
           filter: brightness(0.95);
+        }
+
+        &:disabled {
+          background: #3fad274b;
+          cursor: not-allowed;
         }
       }
     }
